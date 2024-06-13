@@ -1,0 +1,51 @@
+header {
+  padding: 0;
+  margin: 0;
+  background-image: url(/cornrows.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  filter: brightness(60%);
+  .title {
+    text-align: center;
+    font-size: 6rem;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    color: var(--secondary-color);
+    font-family: "Great Vibes", cursive !important;
+  }
+}
+main {
+  height: fit-content;
+  background-image: url("/BBR_Background.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  padding: 30px 0 30px 0;
+  gap: 20px;
+  .large-txt {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--tertiary-color);
+    padding: 20px 0 20px 0;
+  }
+}
+.policies {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .policies {
+    flex-direction: column;
+    display: flex;
+  }
+  header {
+    .title {
+      font-size: 50px;
+    }
+  }
+}

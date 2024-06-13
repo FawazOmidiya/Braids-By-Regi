@@ -1,0 +1,26 @@
+.MedSect {
+  height: 30vh;
+  width: 40%;
+  border-radius: 500px;
+  background-color: white;
+  padding: 20px 0 0 0;
+  overflow: auto;
+  text-align: center !important;
+  background-image: radial-gradient(#28adb2, #a5d184);
+  margin: auto;
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  p {
+    padding: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .MedSect {
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    height: fit-content;
+  }
+}

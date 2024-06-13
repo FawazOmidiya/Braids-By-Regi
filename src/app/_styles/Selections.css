@@ -1,0 +1,14 @@
+.selectionsContainer {
+  gap: 4vh;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+.style-group {
+  background-color: white;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

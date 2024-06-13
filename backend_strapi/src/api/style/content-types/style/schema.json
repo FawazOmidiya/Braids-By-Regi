@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "styles",
+  "info": {
+    "singularName": "style",
+    "pluralName": "styles",
+    "displayName": "Styles",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Style": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "integer",
+      "required": true
+    },
+    "Duration": {
+      "type": "integer",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "styles"
+    },
+    "Availability": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

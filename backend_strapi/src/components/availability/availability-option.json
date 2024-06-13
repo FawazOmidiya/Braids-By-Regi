@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_availability_availability_options",
+  "info": {
+    "displayName": "Availability 1",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Availability1": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

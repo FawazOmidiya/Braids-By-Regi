@@ -1,0 +1,47 @@
+nav {
+  padding: 15px 15px 15px 15px;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .icon {
+    height: 150px;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-image: url(/BBR_logo.png);
+    align-self: center;
+  }
+  .nav-links {
+    li {
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: all 0.4s ease-in-out;
+        a {
+          color: var(--secondary-color);
+        }
+      }
+      a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+      }
+    }
+  }
+  .nav-bookBtn {
+    margin: 0 10px 0 0;
+    width: auto;
+    button {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    li {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/* styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.galleryContainer {
+  overflow: hidden;
+}
+
+.slide {
+  transform: scale(0.8);
+  transition: transform 2000ms;
+  margin: 50px 0 50px 0;
+  img {
+    width: 100%;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+.active {
+  transform: scale(1.1);
+  opacity: 1;
+}

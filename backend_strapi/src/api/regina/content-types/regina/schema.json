@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "reginas",
+  "info": {
+    "singularName": "regina",
+    "pluralName": "reginas",
+    "displayName": "Regina",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Availability": {
+      "type": "customField",
+      "required": false,
+      "options": [
+        "Sunday:0",
+        "Monday:1",
+        "Tuesday:2",
+        "Wednesday:3",
+        "Thursday:4",
+        "Friday:5",
+        "Saturday:6"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    }
+  }
+}

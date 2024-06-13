@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_availability_availability_2s",
+  "info": {
+    "displayName": "Availability 2"
+  },
+  "options": {},
+  "attributes": {
+    "Availability": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
