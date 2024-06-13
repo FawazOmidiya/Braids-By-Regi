@@ -9,7 +9,7 @@ export async function POST(req) {
 
   try {
     const data = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Appointments@braidsbyregi.com",
       to: [response.data.email],
       subject: "Booking Confirmation ",
       react: StripeWelcomeEmail({ response }),
