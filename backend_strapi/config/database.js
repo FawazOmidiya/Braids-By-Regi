@@ -1,17 +1,17 @@
 const path = require("path");
 
 module.exports = ({ env }) => {
-  const client = env("DATABASE_CLIENT", "sqlite");
+  const client = env("DATABASE_CLIENT", "mysql");
 
   const connections = {
     mysql: {
       connection: {
         connectionString: env("DATABASE_URL"),
-        host: env("DATABASE_HOST", "mysql-1db22ab0-bbr-web1.e.aivencloud.com"),
-        port: env.int("DATABASE_PORT", 13370),
-        database: env("DATABASE_NAME", "defaultdb"),
-        user: env("DATABASE_USERNAME", "avnadmin"),
-        password: env("DATABASE_PASSWORD", "AVNS_CDixADjhM_rAPFkmwFH"),
+        host: env("DATABASE_HOST"),
+        port: env.int("DATABASE_PORT"),
+        database: env("DATABASE_NAME"),
+        user: env("DATABASE_USERNAME"),
+        password: env("DATABASE_PASSWORD"),
         ssl: env.bool("DATABASE_SSL", false) && {
           key: env("DATABASE_SSL_KEY", undefined),
           cert: env("DATABASE_SSL_CERT", undefined),
@@ -87,7 +87,6 @@ module.exports = ({ env }) => {
           env("DATABASE_FILENAME", ".tmp/data.db")
         ),
       },
-      useNullAsDefault: true,
     },
   };
 
