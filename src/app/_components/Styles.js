@@ -2,11 +2,8 @@ import React from "react";
 import "../_styles/Styles.css";
 import BookBtn from "./BookBtn";
 import Image from "next/image";
-import { useMediaQuery } from "@uidotdev/usehooks";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 function Styles({ option }) {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
-
   return (
     <>
       <div className="flex flex-col">

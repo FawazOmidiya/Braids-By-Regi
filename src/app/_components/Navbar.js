@@ -17,10 +17,12 @@ import {
 } from "@/components/ui/accordion";
 import GlobalAPI from "../utils/GlobalAPI";
 function Navbar() {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const [isDesktop, setIsDesktop] = useState(false);
+
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategory();
+    setIsDesktop(useMediaQuery({ query: "(min-width: 768px)" }));
   }, []);
   const getCategory = () => {
     GlobalAPI.getCategory().then((categories) => {
