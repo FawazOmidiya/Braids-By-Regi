@@ -28,7 +28,7 @@ function Categories({ params }) {
       setCategory(category.data.data);
     });
   };
-  if (isDesktop) {
+  if (isDesktop()) {
     return (
       <div className="bg-primary">
         <Navbar></Navbar>

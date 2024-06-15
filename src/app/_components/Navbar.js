@@ -30,7 +30,7 @@ function Navbar() {
       setCategories(categories.data.data);
     });
   };
-  if (isDesktop) {
+  if (isDesktop()) {
     return (
       <>
         <nav className="bg-transparent">
