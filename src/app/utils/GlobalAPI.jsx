@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 
-const API_KEY = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_STRAPI_API_KEY2;
 
 const axiosClient = axios.create({
   baseURL: "https://braids-by-regi.onrender.com/api",
