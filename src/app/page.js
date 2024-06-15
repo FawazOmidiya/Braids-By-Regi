@@ -34,7 +34,7 @@ export default function Home() {
                 <br />
                 Deposits must be sent in the same day you book your appointment
                 via e-transfer to reginabielu@gmail.com. <br />
-                Your appointment will be cancelled if a deposit hasn't been
+                Your appointment will be cancelled if a deposit has not been
                 made.
               </p>
             </MedSect>
@@ -43,7 +43,7 @@ export default function Home() {
               <p>
                 Deposits must be sent in the same day you book your appointment
                 via e-transfer to reginabielu@gmail.com. <br />
-                Your appointment will be cancelled if a deposit hasn't been
+                Your appointment will be cancelled if a deposit has not been
                 made.
               </p>
             </MedSect>

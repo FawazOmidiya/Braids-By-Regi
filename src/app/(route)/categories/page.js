@@ -2,7 +2,7 @@
 import Navbar from "@/app/_components/Navbar";
 import React, { useEffect, useState } from "react";
 import GlobalAPI from "@/app/utils/GlobalAPI";
-function page() {
+function Page() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategories();
@@ -32,4 +32,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

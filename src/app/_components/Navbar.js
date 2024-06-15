@@ -83,7 +83,7 @@ function Navbar() {
                         <ul className="flex flex-col">
                           {categories.map((item, index) => {
                             return (
-                              <li>
+                              <li key={index}>
                                 <Link
                                   key={item.id}
                                   href={`/categories/${item.id}`}
