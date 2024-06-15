@@ -17,7 +17,9 @@ import {
 } from "@/components/ui/accordion";
 import GlobalAPI from "../utils/GlobalAPI";
 function Navbar() {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = () => {
+    return window.matchMedia("(min-width: 768px)").matches;
+  };
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategory();

@@ -6,7 +6,9 @@ import Styles from "@/app/_components/Styles";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
 function Categories({ params }) {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = () => {
+    return window.matchMedia("(min-width: 768px)").matches;
+  };
   const [category, setCategory] = useState([]);
   const [categoryList, setCategoryList] = useState([]);
   // fetching information from backend. UseEffect is called to call functions after decleration
