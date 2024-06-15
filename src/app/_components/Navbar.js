@@ -17,12 +17,28 @@ import {
 } from "@/components/ui/accordion";
 import GlobalAPI from "../utils/GlobalAPI";
 function Navbar() {
-  const isDesktop = () => {
-    return window.matchMedia("(min-width: 768px)").matches;
-  };
+  const [isDesktop, setIsDesktop] = useState(false);
+
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategory();
+    const checkViewport = () => {
+      setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+    };
+
+    // Initial check
+    checkViewport();
+
+    // Listen for window resize events
+    const resizeListener = () => {
+      checkViewport();
+    };
+    window.addEventListener("resize", resizeListener);
+
+    // Clean up listener on component unmount
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
   }, []);
   const getCategory = () => {
     GlobalAPI.getCategory().then((categories) => {
@@ -30,7 +46,7 @@ function Navbar() {
       setCategories(categories.data.data);
     });
   };
-  if (isDesktop()) {
+  if (isDesktop) {
     return (
       <>
         <nav className="bg-transparent">

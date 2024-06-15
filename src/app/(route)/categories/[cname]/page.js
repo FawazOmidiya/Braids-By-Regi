@@ -6,15 +6,31 @@ import Styles from "@/app/_components/Styles";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
 function Categories({ params }) {
-  const isDesktop = () => {
-    return window.matchMedia("(min-width: 768px)").matches;
-  };
+  const [isDesktop, setIsDesktop] = useState(false);
+
   const [category, setCategory] = useState([]);
   const [categoryList, setCategoryList] = useState([]);
   // fetching information from backend. UseEffect is called to call functions after decleration
   useEffect(() => {
     getCategoryById();
     getCategories();
+    const checkViewport = () => {
+      setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+    };
+
+    // Initial check
+    checkViewport();
+
+    // Listen for window resize events
+    const resizeListener = () => {
+      checkViewport();
+    };
+    window.addEventListener("resize", resizeListener);
+
+    // Clean up listener on component unmount
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
   }, []);
   const getCategories = () => {
     GlobalAPI.getCategory().then((category) => {
