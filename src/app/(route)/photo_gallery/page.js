@@ -12,15 +12,6 @@ function page() {
       <div className="justify-center">
         <h1>BBR Photo Gallery</h1>
         <div className="grid grid-cols-2 grid-rows-4 w-6/6 p-12 gap-y-4 bg-blue-500 m-auto">
-          <div>
-            <AspectRatio>
-              <Image
-                src="/badgal.png"
-                style={{ objectFit: "cover" }}
-                fill={true}
-              ></Image>
-            </AspectRatio>
-          </div>
           <div className=" border box-2">2</div>
           <div className=" col-span-2 border">3</div>
           <div className=" border grid grid-rows-2">
