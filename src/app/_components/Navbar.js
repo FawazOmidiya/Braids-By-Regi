@@ -59,11 +59,6 @@ function Navbar() {
                   <Link href="/categories/1">Book Now</Link>
                 </li>
                 <li key="2">
-                  <Link className="" href="/photo_gallery">
-                    Gallery
-                  </Link>
-                </li>
-                <li key="3">
                   <Link
                     className=""
                     href="https://www.instagram.com/braidsbyregi/"
